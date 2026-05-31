@@ -1,6 +1,6 @@
 console.log("Page loaded");
 
-const ws = new WebSocket("ws://localhost:8080");
+const ws = new WebSocket("wss://privatbank-exchange-rate-websocket-app.onrender.com");
 
 const form = document.getElementById("formChat");
 const resultField = document.getElementById("exchange-rate");

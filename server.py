@@ -59,10 +59,12 @@ class Server:
                 result = await get_exchange(days, currencies)
                 await ws.send(json.dumps(result, indent=2, ensure_ascii=False))
 
+host = "0.0.0.0"
+port = int(os.environ.get("PORT", 8080))
 
 async def main():
     server = Server()
-    async with websockets.serve(server.ws_handler, "localhost", 8080):
+    async with websockets.serve(server.ws_handler, host, port):
         await asyncio.Future()
 
 

@@ -28,8 +28,9 @@ This project is an asynchronous Python application that fetches exchange rates f
 Clone the repository:
 
 ```bash
-git clone <PrivatBank-Exchange-Rate-WebSocket-App>
-cd <project-folder>
+git clone https://github.com/ArtemHerasym/PrivatBank-Exchange-Rate-WebSocket-App.git
+cd PrivatBank-Exchange-Rate-WebSocket-App
+>
 ```
 
 Create and activate a virtual environment:

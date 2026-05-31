@@ -31,6 +31,11 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
+  if (ws.readyState !== WebSocket.OPEN) {
+  resultField.textContent = "Server is still connecting. Wait a few seconds and try again.";
+  return;
+}
+
   ws.send(JSON.stringify(request));
 
   resultField.textContent = "Loading...";
@@ -38,6 +43,7 @@ form.addEventListener("submit", (event) => {
 
 ws.onopen = () => {
   console.log("Connected to WebSocket server");
+  resultField.textContent = "Connected. Select options and click SHOW EXCHANGE.";
 };
 
 ws.onmessage = (event) => {
@@ -46,4 +52,9 @@ ws.onmessage = (event) => {
 
 ws.onerror = () => {
   resultField.textContent = "WebSocket connection error";
+};
+
+ws.onclose = () => {
+  resultField.textContent =
+    "WebSocket connection closed. The Render server may be sleeping. Refresh the page and wait a few seconds.";
 };

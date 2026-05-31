@@ -28,7 +28,7 @@ This project is an asynchronous Python application that fetches exchange rates f
 Clone the repository:
 
 ```bash
-git clone <your-repository-url>
+git clone <PrivatBank-Exchange-Rate-WebSocket-App>
 cd <project-folder>
 ```
 

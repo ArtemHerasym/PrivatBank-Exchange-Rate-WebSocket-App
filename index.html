@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="main-title">Currencies Exchange Rate Calculator</h1>
+
+    <div class="dashboard-container">
+      <form id="formChat">
+        <!--Currencies CheckBox -->
+        <input type="checkbox" id="USD" value="USD" />
+        <label for="USD">USD</label>
+
+        <input type="checkbox" id="EUR" value="EUR" />
+        <label for="EUR">EUR</label>
+
+        <input type="checkbox" id="GBP" value="GBP" />
+        <label for="GBP">GBP</label>
+
+        <input type="checkbox" id="PLN" value="PLN" />
+        <label for="PLN">PLN</label>
+
+        <input type="checkbox" id="CAD" value="CAD" />
+        <label for="CAD">CAD</label>
+
+        <!-- Days Selection Dropdown Menu -->
+        <div class="dropdown">
+          <select id="days">
+            <option value="1">Today</option>
+            <option value="2">Past 2 days</option>
+            <option value="2">Past 3 days</option>
+            <option value="2">Past 4 days</option>
+            <option value="2">Past 5 days</option>
+          </select>
+        </div>
+
+        <button type="submit">SHOW EXCHANGE</button>
+      </form>
+
+      <div id="result-field">
+        <h2>Exchange Rate Results</h2>
+        <pre id="exchange-rate">...</pre>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

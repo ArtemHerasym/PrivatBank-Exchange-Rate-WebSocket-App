@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "module-s5-homework"
+version = "0.1.0"
+description = ""
+authors = ["Artem Herasymenko <gerasartem4@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.14"
+websockets = "^16.0"
+names = "^0.3.0"
+aiohttp = "^3.13.5"
+aiofiles = "^25.1.0"
+aiofile = "^3.11.1"
+aiopath = "^0.7.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100vh;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, #f8fafc 30%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  max-width: 960px;
+  align-items: flex-start;
+}
+
+#formChat {
+  flex: 1;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+#result-field {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#result-field h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3b82f6;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03em;
+}
+
+#exchange-rate {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+
+#formChat input[type="checkbox"] {
+  display: none;
+}
+
+#formChat label {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  background-color: #334155;
+  border: 1px solid #475569;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+#formChat label:hover {
+  background-color: #475569;
+  border-color: #64748b;
+  transform: translateY(-1px);
+}
+
+#formChat input[type="checkbox"]:checked + label {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-color: #60a5fa;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+
+.dropdown select {
+  width: 100%;
+  background-color: #1e293b;
+  border: 1px solid #475569;
+  color: #f8fafc;
+  padding: 0.85rem 2.5rem 0.85rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.dropdown select:hover {
+  background-color: #334155;
+  border-color: #64748b;
+}
+
+.dropdown select option {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 0.75rem;
+}
+
+.dropdown::after {
+  content: "▼";
+  font-size: 0.65rem;
+  color: #94a3b8;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+#formChat button[type="submit"] {
+  width: 100%;
+  max-width: 320px;
+  margin-top: 0.5rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+  transition: all 0.2s;
+}
+
+#formChat button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+  filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  #formChat,
+  #result-field {
+    width: 100%;
+  }
+}

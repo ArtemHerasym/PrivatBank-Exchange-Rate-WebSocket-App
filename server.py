@@ -9,6 +9,7 @@ from exchange_service_console import get_exchange
 from aiofile import async_open
 from anyio import Path as AsyncPath
 from datetime import datetime
+import os
 
 logging.basicConfig(level=logging.INFO)
 

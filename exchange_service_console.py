@@ -3,6 +3,8 @@ import aiohttp
 from datetime import datetime, timedelta
 import json
 import sys
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 
 async def get_exchange_for_date(session, date, symbols):
@@ -28,11 +30,12 @@ async def get_exchange_for_date(session, date, symbols):
 
 def get_dates(days: int):
     dates = []
-    today = datetime.today().date()
+    today = datetime.now(ZoneInfo("Europe/Kyiv")).date()
+
     for i in range(days):
         dates.append(today - timedelta(days=i))
-    formated_dates = [date.strftime("%d.%m.%Y") for date in dates]
-    return formated_dates
+
+    return [date.strftime("%d.%m.%Y") for date in dates]
 
 
 # This function is for the websockets realisation

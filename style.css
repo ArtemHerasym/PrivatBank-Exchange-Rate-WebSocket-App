@@ -182,12 +182,73 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    align-items: stretch;
+  }
+
+  .main-title {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+
   .dashboard-container {
-    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    gap: 1rem;
   }
 
   #formChat,
   #result-field {
     width: 100%;
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  #formChat label,
+  .dropdown,
+  #formChat button[type="submit"] {
+    width: 100%;
+    max-width: none;
+  }
+
+  #result-field h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  #exchange-rate {
+    width: 100%;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    padding: 0.75rem;
+  }
+
+  .main-title {
+    font-size: 1.2rem;
+  }
+
+  #formChat,
+  #result-field {
+    padding: 1rem;
+  }
+
+  #formChat label,
+  .dropdown select,
+  #formChat button[type="submit"] {
+    font-size: 0.75rem;
+    padding: 0.65rem;
+  }
+
+  #exchange-rate {
+    font-size: 0.7rem;
   }
 }
